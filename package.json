@@ -1,0 +1,62 @@
+{
+  "name": "js",
+  "version": "0.1.0",
+  "description": "Every possible javascript utility you ever need",
+  "main": "index.js",
+  "scripts": {
+    "new": "node scripts/new.js",
+    "test": "yarn test",
+    "publish": "lerna run tsc && lerna publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softvar/js.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "lerna",
+    "utilities",
+    "frontend"
+  ],
+  "author": "Varun Malhotra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/softvar/js/issues"
+  },
+  "homepage": "https://github.com/softvar/js#readme",
+  "dependencies": {
+    "lerna": "^3.22.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.13",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.9",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn test"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,ts}": [
+      "node scripts/commit-msg",
+      "prettier"
+    ],
+    "**/*.{json,md}": "prettier"
+  },
+  "engines": {
+    "node": ">= 12.16.0",
+    "yarn": ">= 1.22.4",
+    "npm": ">= 6.13.4"
+  },
+  "engineStrict": true,
+  "browserslist": [
+    "> 1%",
+    "last 3 versions",
+    "not ie <= 10"
+  ]
+}
