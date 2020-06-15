@@ -1,0 +1,20 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "version": "independent",
+  "changelog": {
+    "repo": "js",
+    "labels": {
+      "PR: Breaking Change": ":boom: Breaking Change",
+      "PR: Bug Fix": ":bug: Bug Fix",
+      "PR: Docs": ":memo: Documentation",
+      "PR: Internal": ":house: Internal",
+      "PR: New Feature": ":rocket: New Feature",
+      "PR: Polish": ":nail_care: Polish",
+      "PR: Spec Compliancy": ":eyeglasses: Spec Compliancy"
+    },
+    "cacheDir": ".cache"
+  },
+  "npmClient": "yarn"
+}

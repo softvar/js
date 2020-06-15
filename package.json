@@ -29,10 +29,13 @@
     "lerna": "^3.22.1"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.0",
     "@types/node": "^14.0.13",
     "husky": "^4.2.5",
+    "jest": "^26.0.1",
     "lint-staged": "^10.2.9",
     "prettier": "^2.0.5",
+    "ts-jest": "^26.1.0",
     "typescript": "^3.9.5"
   },
   "husky": {
@@ -42,7 +45,7 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,ts}": [
+    "**/*.{ts}": [
       "node scripts/commit-msg",
       "prettier"
     ],
