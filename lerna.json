@@ -3,6 +3,13 @@
     "packages/*"
   ],
   "version": "independent",
+  "command": {
+    "publish": {
+      "ignoreChanges": ["ignored-file", "*.md"],
+      "message": "chore(release): publish",
+      "registry": "https://registry.npmjs.org/"
+    }
+  },
   "changelog": {
     "repo": "js",
     "labels": {
@@ -16,5 +23,5 @@
     },
     "cacheDir": ".cache"
   },
-  "npmClient": "yarn"
+  "npmClient": "npm"
 }

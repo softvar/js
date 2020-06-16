@@ -1,1 +1,1 @@
-export declare function copy(arr: Array<any>, mapFn: (any)): unknown[];
+export declare function copy(arr: any[], mapFn: (any)): unknown[];

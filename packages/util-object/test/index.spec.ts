@@ -1,5 +1,5 @@
-const object = require('../src/');
+import { keys } from '../src/';
 
-test('object - is defined', () => {
-  expect(object).toBeDefined();
+test('Object - keys fn is defined', () => {
+  expect(keys).toBeDefined();
 })

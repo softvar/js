@@ -1,5 +1,5 @@
-const array = require('../src/');
+import { copy } from '../src/'
 
-test('array - is defined', () => {
-  expect(array).toBeDefined();
+test('Array - copy fn is defined', () => {
+  expect(copy).toBeDefined();
 })
