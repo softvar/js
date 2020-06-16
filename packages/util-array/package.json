@@ -1,6 +1,6 @@
 {
   "name": "@softvar/util-array",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "array utility",
   "main": "dist/index.js",
   "license": "MIT",
