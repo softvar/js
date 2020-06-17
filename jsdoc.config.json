@@ -1,0 +1,29 @@
+{
+  "tags": {
+      "allowUnknownTags": true,
+      "dictionaries": ["jsdoc"]
+  },
+  "source": {
+      "include": ["packages", "package.json", "README.md"],
+      "includePattern": "js$",
+      "excludePattern": "(node_modules/|docs|templates|jsdoc-template)"
+  },
+  "plugins": [
+  ],
+  "templates": {
+      "referenceTitle": "js",
+      "disableSort": false,
+      "collapse": true,
+      "resources": {
+          "google": "https://www.google.com/"
+      }
+  },
+  "sourceType": "module",
+  "opts": {
+      "destination": "./docs/",
+      "encoding": "utf8",
+      "private": true,
+      "recurse": true,
+      "template": "templates/jsdoc"
+  }
+}

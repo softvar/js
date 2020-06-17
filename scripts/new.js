@@ -117,7 +117,7 @@ function addNewPackage(answers) {
       ]
     },
     {
-      file: `${folderPath}/index.ts`,
+      file: `${folderPath}/src/index.ts`,
       replace: [
         {
           to: namePlaceholder,
