@@ -7,6 +7,13 @@
 
 Every possible javascript utility you ever need
 
+### Packages
+
+| Package Name | Version |
+|--------------|---------|
+|  util-array  | [![npm](https://img.shields.io/npm/v/@softvar/util-array.svg?label=@softvar/util-array)](https://www.npmjs.com/package/@softvar/util-array) |
+|  util-object | [![npm](https://img.shields.io/npm/v/@softvar/util-object.svg?label=@softvar/util-object)](https://www.npmjs.com/package/@softvar/util-object) |
+
 ### Documentation
 
 Auto-generated using [JSDoc](https://github.com/jsdoc/jsdoc) and deployed via [Netlify](https://softvar-js.netlify.app/)
