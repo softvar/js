@@ -15,7 +15,8 @@
       "disableSort": false,
       "collapse": true,
       "resources": {
-          "google": "https://www.google.com/"
+          "Object": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+          "Array": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
       }
   },
   "sourceType": "module",
