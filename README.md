@@ -2,12 +2,16 @@
 
 [![Maintained with Lerna](https://img.shields.io/badge/maintained%20with-lerna-blue?style=for-the-badge)](https://lerna.js.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge&logo=)](https://opensource.org/licenses/MIT)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fe872ca1-6098-4e4b-88f3-a461f120356c/deploy-status)](https://app.netlify.com/sites/softvar-js/deploys)
+
 
 Every possible javascript utility you ever need
 
 ### Documentation
 
-Auto-generated using [JSDoc](https://github.com/jsdoc/jsdoc) and deployed via netlify
+Auto-generated using [JSDoc](https://github.com/jsdoc/jsdoc) and deployed via [Netlify](https://softvar-js.netlify.app/)
+
+[Doc Link](https://softvar-js.netlify.app/)
 
 ### Attributions
 
