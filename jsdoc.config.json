@@ -17,7 +17,12 @@
       "resources": {
           "Object": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
           "Array": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
-      }
+      },
+      "search": {
+        "appId": "JRX357TS85",
+        "apiKey": "fc8c5242dce5f4212bf70c783373baab",
+        "indexName": "softvar-js"
+    }
   },
   "sourceType": "module",
   "opts": {
