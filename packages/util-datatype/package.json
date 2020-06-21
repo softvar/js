@@ -1,0 +1,33 @@
+{
+  "name": "@softvar/util-datatype",
+  "version": "0.1.0",
+  "description": "datatype utility",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "keywords": [],
+  "author": "softvar <varun2902@gmail.com>",
+  "homepage": "https://github.com/softvar/js/tree/master/packages/util-datatype#readme",
+  "scripts": {
+    "tsc": "tsc",
+    "test": "../../node_modules/jest/bin/jest.js --config='../../jest.config.js'"
+  },
+  "dependencies": {},
+  "typings": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softvar/js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/softvar/js/issues"
+  }
+}

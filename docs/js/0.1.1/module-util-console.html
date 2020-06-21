@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      util-object/lib/index.js - Documentation
+      util-console - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -99,51 +97,380 @@
   <div id="main">
     
       <h1 class="page-title">
-        util-object/lib/index.js
+        util-console
       </h1>
     
 
     
-      
 
 <section>
+  <header>
+    
+      
+  </header>
+
   <article>
-    <pre class="prettyprint source linenums"><code>"use strict";
-/**
- * @module util-object
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.areKeys = exports.keys = void 0;
-/**
- * @file All object related utilities
- */
-/**
- * Returns keys of the object
- * @since 0.0.4
- *
- * @param {object} obj - input object
- * @returns {array} keys
- */
-function keys(obj) {
-    return Object.keys(obj);
-}
-exports.keys = keys;
-/**
- * Returns whether an object has keys
- * @since 0.0.4
- *
- * @param {object} obj - input object
- * @returns {boolean}
- */
-function areKeys(obj) {
-    return Object.keys(obj).length;
-}
-exports.areKeys = areKeys;
-//# sourceMappingURL=index.js.map</code></pre>
+    <div class="container-overview">
+      
+        
+
+        
+      
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+      <h3 class="subsection-title">Methods</h3>
+
+      
+        
+
+
+  
+
+  <span class='name-container'>
+    <a class="link-icon" href="#~prints">
+      <svg height="20" width="20" style="fill: black;">
+        <use xlink:href="#linkIcon"></use>
+      </svg>
+    </a>
+    <h4 class="name" id="~prints">
+      <span class="type-signature">(inner) </span>prints<span class="signature">(message, type<span class="signature-attributes">opt</span>, config<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
+    </h4>
+  </span>
+
+  
+
+
+
+  <div class="description">
+    Prints the message to the console with different types. print is available on window, so prints.
+  </div>
+
+
+
+
+
+
+
+  <h5>Parameters:</h5>
+  
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+        <th>Attributes</th>
+      
+
+      
+        <th>Default</th>
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>message</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      *
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+
+            
+
+            
+          </td>
+        
+
+        
+          <td class="default">
+            
+          </td>
+        
+
+        <td class="description last">
+          to rprint
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>type</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      string
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+              &lt;optional><br>
+            
+
+            
+
+            
+          </td>
+        
+
+        
+          <td class="default">
+            
+              log
+            
+          </td>
+        
+
+        <td class="description last">
+          log/info/warn/error/table/clear
+          
+        </td>
+      </tr>
+
+    
+      <tr>
+        
+          <td class="name"><code>config</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      object
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+              &lt;optional><br>
+            
+
+            
+
+            
+          </td>
+        
+
+        
+          <td class="default">
+            
+              {}
+            
+          </td>
+        
+
+        <td class="description last">
+          Optional configuration parameters
+          
+            <h6>Properties</h6>
+            
+
+<table class="params">
+  <thead>
+    <tr>
+      
+        <th>Name</th>
+      
+
+      <th>Type</th>
+
+      
+        <th>Attributes</th>
+      
+
+      
+
+      <th class="last">Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    
+      <tr>
+        
+          <td class="name"><code>formatter</code></td>
+        
+
+        <td class="type">
+          
+            
+    <span class="param-type">
+      function
+    </span>
+
+    
+
+
+          
+        </td>
+
+        
+          <td class="attributes">
+            
+              &lt;optional><br>
+            
+
+            
+
+            
+          </td>
+        
+
+        
+
+        <td class="description last">
+          message can be transformed via this callback, accepting first parameter as message and second as type
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+          
+        </td>
+      </tr>
+
+    
+  </tbody>
+</table>
+
+
+
+
+
+<dl class="details">
+
+  
+
+  
+    <dt class="tag-since">Since:</dt>
+    <dd class="tag-since">
+      <ul class="dummy">
+        <li>
+          1.0.0
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source">
+      <ul class="dummy">
+        <li>
+          <a href="util-console_lib_index.js.html">util-console/lib/index.js</a>, <a href="util-console_lib_index.js.html#line19">line 19</a>
+        </li>
+      </ul>
+    </dd>
+  
+
+  
+
+  
+
+  
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    
+
+    
+
+    
   </article>
 </section>
 
-    
+
 
 
   </div>

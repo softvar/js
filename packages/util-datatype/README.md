@@ -1,4 +1,4 @@
-## util-array
+## util-datatype
 
 ### License
 

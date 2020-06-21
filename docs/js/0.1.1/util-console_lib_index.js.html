@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      util-object/lib/index.js - Documentation
+      util-console/lib/index.js - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -99,7 +99,7 @@
   <div id="main">
     
       <h1 class="page-title">
-        util-object/lib/index.js
+        util-console/lib/index.js
       </h1>
     
 
@@ -110,35 +110,30 @@
   <article>
     <pre class="prettyprint source linenums"><code>"use strict";
 /**
- * @module util-object
+ * @module util-console
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.areKeys = exports.keys = void 0;
+exports.prints = void 0;
 /**
- * @file All object related utilities
- */
+* @file All console related utilities
+*/
+const { isString, isObject } = require('@softvar/util-datatype');
 /**
- * Returns keys of the object
- * @since 0.0.4
- *
- * @param {object} obj - input object
- * @returns {array} keys
+ * Prints the message to the console with different types. print is available on window, so prints.
+ * @since 1.0.0
+ * @param {*} message to rprint
+ * @param {string} [type=log] log/info/warn/error/table/clear
+ * @param {object} [config={}] Optional configuration parameters
+ * @param {Function} [config.formatter] message can be transformed via this callback, accepting first parameter as message and second as type
  */
-function keys(obj) {
-    return Object.keys(obj);
+function prints(message = '', type = 'log', config = { formatter: (message, _type) => message }) {
+    if (!isString(type) || !isObject(config)) {
+        throw new Error('Please pass the valid types for the arguments');
+    }
+    console[type](config.formatter(message, type));
 }
-exports.keys = keys;
-/**
- * Returns whether an object has keys
- * @since 0.0.4
- *
- * @param {object} obj - input object
- * @returns {boolean}
- */
-function areKeys(obj) {
-    return Object.keys(obj).length;
-}
-exports.areKeys = areKeys;
+exports.prints = prints;
+;
 //# sourceMappingURL=index.js.map</code></pre>
   </article>
 </section>

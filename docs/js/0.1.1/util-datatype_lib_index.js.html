@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-      util-object/lib/index.js - Documentation
+      util-datatype/lib/index.js - Documentation
   </title>
 
   <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
@@ -99,7 +99,7 @@
   <div id="main">
     
       <h1 class="page-title">
-        util-object/lib/index.js
+        util-datatype/lib/index.js
       </h1>
     
 
@@ -110,35 +110,157 @@
   <article>
     <pre class="prettyprint source linenums"><code>"use strict";
 /**
- * @module util-object
+ * @module util-datatype
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.areKeys = exports.keys = void 0;
+exports.isUndefined = exports.isString = exports.isRegex = exports.isPromise = exports.isNumber = exports.isNull = exports.isNaN = exports.isObject = exports.isFunction = exports.isDefined = exports.isDate = exports.isBoolean = exports.isArray = void 0;
 /**
- * @file All object related utilities
- */
+* @file All datatype related utilities
+*/
+const toString = Object.prototype.toString;
 /**
- * Returns keys of the object
- * @since 0.0.4
- *
- * @param {object} obj - input object
- * @returns {array} keys
- */
-function keys(obj) {
-    return Object.keys(obj);
-}
-exports.keys = keys;
-/**
- * Returns whether an object has keys
- * @since 0.0.4
- *
- * @param {object} obj - input object
+ * Check if the given value is of type: Array
+ * @since 1.0.0
+ * @param {*} val
  * @returns {boolean}
  */
-function areKeys(obj) {
-    return Object.keys(obj).length;
+function isArray(val) {
+    return toString.call(val) === '[object Array]';
 }
-exports.areKeys = areKeys;
+exports.isArray = isArray;
+;
+/**
+ * Check if the given value is of type: Boolean
+ * @since 1.0.0
+ * @param {*} val
+ * @returns {boolean}
+ */
+function isBoolean(val) {
+    return toString.call(val) === '[object Boolean]';
+}
+exports.isBoolean = isBoolean;
+;
+/**
+ * Check if the given value is of type: Date
+ * @since 1.0.0
+ * @param {*} val
+ * @returns {boolean}
+ */
+function isDate(val) {
+    return toString.call(val) === '[object Date]';
+}
+exports.isDate = isDate;
+;
+/**
+ * Check if the given value is defined
+ * @since 1.0.0
+ * @param {*} val
+ * @returns {boolean}
+ */
+function isDefined(val) {
+    return !this.isUndefined(val) &amp;&amp; !this.isNull(val);
+}
+exports.isDefined = isDefined;
+;
+/**
+ * Check if the given value is of type: Function
+ * @since 1.0.0
+ * @param {*} val
+ * @returns {boolean}
+ */
+function isFunction(val) {
+    return toString.call(val) === '[object Function]';
+}
+exports.isFunction = isFunction;
+;
+/**
+ * Check if the given value is of type: Object
+ * @since 1.0.0
+ * @param {*} val
+ * @returns {boolean}
+ */
+function isObject(val) {
+    return toString.call(val) === '[object Object]';
+}
+exports.isObject = isObject;
+;
+/**
+ * Check if the given value is of type: NaN i.e. not a number
+ * @since 1.0.0
+ * @param {*} val
+ * @returns {boolean}
+ */
+function isNaN(val) {
+    return val !== val;
+}
+exports.isNaN = isNaN;
+;
+/**
+ * Check if the given value is of type: Null
+ * @since 1.0.0
+ * @param {*} val
+ * @returns {boolean}
+ */
+function isNull(val) {
+    return toString.call(val) === '[object Null]';
+}
+exports.isNull = isNull;
+;
+/**
+ * Check if the given value is of type: Number
+ * @since 1.0.0
+ * @param {*} val
+ * @returns {boolean}
+ */
+function isNumber(val) {
+    return toString.call(val) === '[object Number]';
+}
+exports.isNumber = isNumber;
+;
+/**
+ * Check if the given value is of type: Promise
+ * @since 1.0.0
+ * @param {*} val
+ * @returns {boolean}
+ */
+function isPromise(val) {
+    return toString.call(val) === '[object Promise]';
+}
+exports.isPromise = isPromise;
+;
+/**
+ * Check if the given value is of type: Regex
+ * @since 1.0.0
+ * @param {*} val
+ * @returns {boolean}
+ */
+function isRegex(val) {
+    return toString.call(val) === '[object RegExp]';
+}
+exports.isRegex = isRegex;
+;
+/**
+ * Check if the given value is of type: String
+ * @since 1.0.0
+ * @param {*} val
+ * @returns {boolean}
+ */
+function isString(val) {
+    return toString.call(val) === '[object String]';
+}
+exports.isString = isString;
+;
+/**
+ * Check if the given value is of type: Undefined
+ * @since 1.0.0
+ * @param {*} val
+ * @returns {boolean}
+ */
+function isUndefined(val) {
+    return toString.call(val) === '[object Undefined]';
+}
+exports.isUndefined = isUndefined;
+;
 //# sourceMappingURL=index.js.map</code></pre>
   </article>
 </section>

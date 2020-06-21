@@ -9,6 +9,7 @@ exports.areKeys = exports.keys = void 0;
  */
 /**
  * Returns keys of the object
+ * @since 0.0.4
  *
  * @param {object} obj - input object
  * @returns {array} keys
@@ -19,6 +20,8 @@ function keys(obj) {
 exports.keys = keys;
 /**
  * Returns whether an object has keys
+ * @since 0.0.4
+ *
  * @param {object} obj - input object
  * @returns {boolean}
  */
