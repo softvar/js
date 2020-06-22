@@ -2,14 +2,14 @@
   "name": "@softvar/util-array",
   "version": "0.0.5",
   "description": "array utility",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "license": "MIT",
   "keywords": [],
   "author": "softvar <varun2902@gmail.com>",
   "homepage": "https://github.com/softvar/js/tree/master/packages/util-array#readme",
   "scripts": {
     "tsc": "tsc",
-    "test": "../../node_modules/jest/bin/jest.js --config='../../jest.config.js'"
+    "test": "../../node_modules/jest/bin/jest.js --config=jest.config.js"
   },
   "typings": "lib/index.d.ts",
   "directories": {

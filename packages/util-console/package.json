@@ -2,14 +2,14 @@
   "name": "@softvar/util-console",
   "version": "0.1.1",
   "description": "console utility",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "license": "MIT",
   "keywords": [],
   "author": "softvar <varun2902@gmail.com>",
   "homepage": "https://github.com/softvar/js/tree/master/packages/util-console#readme",
   "scripts": {
     "tsc": "tsc",
-    "test": "../../node_modules/jest/bin/jest.js --config='../../jest.config.js'"
+    "test": "../../node_modules/jest/bin/jest.js --config=jest.config.js"
   },
   "dependencies": {
     "@softvar/util-datatype": "^1.0.0"

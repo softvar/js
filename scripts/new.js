@@ -93,48 +93,33 @@ function addNewPackage(answers) {
     process.exit(0);
   }
 
-  let list = [
-    {
-      file: `${folderPath}/package.json`,
-      replace: [
-        {
-          to: namePlaceholder,
-          with: name
-        },
-        {
-          to: typePlaceholder,
-          with: type
-        }
-      ]
-    },
-    {
-      file: `${folderPath}/README.md`,
-      replace: [
-        {
-          to: namePlaceholder,
-          with: name
-        }
-      ]
-    },
-    {
-      file: `${folderPath}/src/index.ts`,
-      replace: [
-        {
-          to: namePlaceholder,
-          with: name
-        }
-      ]
-    },
-    {
-      file: `${folderPath}/test/index.spec.ts`,
-      replace: [
-        {
-          to: namePlaceholder,
-          with: name
-        }
-      ]
-    }
-  ];
+  const replace = [{
+    to: namePlaceholder,
+    with: name
+  }, {
+    to: typePlaceholder,
+    with: type
+  }];
+
+  let list = [{
+    file: `${folderPath}/package.json`,
+    replace:
+  }, {
+    file: `${folderPath}/README.md`,
+    replace
+  }, {
+    file: `${folderPath}/src/index.ts`,
+    replace
+  }, {
+    file: `${folderPath}/test/index.spec.ts`,
+    replace
+  }, {
+    file: `${folderPath}/jest.config.js`,
+    replace
+  }, {
+    file: `${folderPath}/.npmignore`,
+    replace
+  }];
 
   replacePlaceholdersInFiles(list);
 }
