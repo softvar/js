@@ -17,28 +17,26 @@ const newLine = '\n';
  * @param {object} [config={}] Optional configuration parameters
  * @param {number} [config.newLinesBefore=0] to have `n` newlines before the console[type] output
  * @param {number} [config.newLinesAfter=0] to have `n` newlines after the console[type] output
- * @param {Function} [config.formatter] message can be transformed via this callback, accepting first parameter as message and second as type
  */
 export function prints(
   message: any = '',
   type: string = 'log',
-  config: { formatter: any; newLinesBefore: number; newLinesAfter: number } = {
-    newLinesBefore: 0,
-    newLinesAfter: 0,
-    formatter: (msg: string, _type: string) => msg,
-  }
+  config: { newLinesBefore: number; newLinesAfter: number } = { newLinesBefore: 0, newLinesAfter: 0 }
 ) {
+
+  const { newLinesBefore = 0, newLinesAfter = 0 } = config;
+
   if (!isString(type) || !isObject(config)) {
     throw new Error('Please pass the valid types for the arguments');
   }
 
-  for (let i = 0; i < config.newLinesBefore; i++) {
+  for (let i = 0; i < newLinesBefore; i++) {
     console[type](newLine);
   }
 
-  console[type](config.formatter(message, type));
+  console[type](message, type);
 
-  for (let i = 0; i < config.newLinesAfter; i++) {
+  for (let i = 0; i < newLinesAfter; i++) {
     console[type](newLine);
   }
 }
