@@ -7,6 +7,8 @@
  */
 import { isString, isObject } from '@softvar/util-datatype';
 
+const newLine = '\n';
+
 /**
  * Prints the message to the console with different types. print is available on window, so prints.
  * @since 1.0.0
@@ -31,12 +33,12 @@ export function prints(
   }
 
   for (let i = 0; i < config.newLinesBefore; i++) {
-    console[type]('\n');
+    console[type](newLine);
   }
 
   console[type](config.formatter(message, type));
 
   for (let i = 0; i < config.newLinesAfter; i++) {
-    console[type]('\n');
+    console[type](newLine);
   }
 }

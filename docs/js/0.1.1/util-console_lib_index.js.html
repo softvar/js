@@ -118,6 +118,7 @@ exports.prints = void 0;
  * @file All console related utilities
  */
 const util_datatype_1 = require("@softvar/util-datatype");
+const newLine = '\n';
 /**
  * Prints the message to the console with different types. print is available on window, so prints.
  * @since 1.0.0
@@ -137,11 +138,11 @@ function prints(message = '', type = 'log', config = {
         throw new Error('Please pass the valid types for the arguments');
     }
     for (let i = 0; i &lt; config.newLinesBefore; i++) {
-        console[type]('\n');
+        console[type](newLine);
     }
     console[type](config.formatter(message, type));
     for (let i = 0; i &lt; config.newLinesAfter; i++) {
-        console[type]('\n');
+        console[type](newLine);
     }
 }
 exports.prints = prints;
