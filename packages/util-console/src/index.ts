@@ -34,7 +34,7 @@ export function prints(
     console[type](newLine);
   }
 
-  console[type](message, type);
+  console[type](message);
 
   for (let i = 0; i < newLinesAfter; i++) {
     console[type](newLine);

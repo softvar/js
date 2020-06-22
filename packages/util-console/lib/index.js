@@ -26,7 +26,7 @@ function prints(message = '', type = 'log', config = { newLinesBefore: 0, newLin
     for (let i = 0; i < newLinesBefore; i++) {
         console[type](newLine);
     }
-    console[type](message, type);
+    console[type](message);
     for (let i = 0; i < newLinesAfter; i++) {
         console[type](newLine);
     }
