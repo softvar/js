@@ -20,6 +20,6 @@
  * @param {mapperFunction=} mapFn - mapper function to transform array values
  * @returns {Array} copied(and transformed) array
  */
-export function copy(arr: any[], mapFn: (any)) {
+export function copy(arr: any[], mapFn: any) {
   return Array.from(arr, mapFn);
 }

@@ -17,4 +17,4 @@
  * @param {mapperFunction=} mapFn - mapper function to transform array values
  * @returns {Array} copied(and transformed) array
  */
-export declare function copy(arr: any[], mapFn: (any)): unknown[];
+export declare function copy(arr: any[], mapFn: any): unknown[];

@@ -44,13 +44,14 @@
   },
   "husky": {
     "hooks": {
+      "commit-msg": "node scripts/commit-msg",
       "pre-commit": "lint-staged",
       "pre-push": "lerna run tsc && yarn lint && yarn jsdoc && yarn test"
     }
   },
   "lint-staged": {
-    "**/*.{ts}": [
-      "node scripts/commit-msg",
+    "**/*.ts": [
+      "yarn lint",
       "prettier"
     ],
     "**/*.{json,md}": "prettier"

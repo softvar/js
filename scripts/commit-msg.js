@@ -15,13 +15,15 @@
 
 'use strict';
 
-let fs = require('fs');
-let util = require('util');
+const fs = require('fs');
+const path = require('path');
+const util = require('util');
 
+const root = path.resolve(path.join(__dirname, '..'));
 
-let MAX_LENGTH = 100;
-let PATTERN = /^(?:fixup!\s*)?(\w*)(\(([\w\$\.\:\*/-]*)\))?\: (.*)$/;
-let IGNORED = /^WIP\:/;
+const MAX_LENGTH = 100;
+const PATTERN = /^(?:fixup!\s*)?(\w*)(\(([\w\$\.\:\*/-]*)\))?\: (.*)$/;
+const IGNORED = /^WIP\:/;
 let TYPES = {
   feat: true,
   fix: true,
@@ -103,7 +105,7 @@ exports.validateMessage = validateMessage;
 
 // hacky start if not run by jasmine :-D
 if (process.argv.join('').indexOf('jasmine-node') === -1) {
-  let commitMsgFile = process.argv[2];
+  let commitMsgFile = `${root}/.git/COMMIT_EDITMSG`;
   let incorrectLogFile = commitMsgFile.replace('COMMIT_EDITMSG', 'logs/incorrect-commit-msgs');
 
   fs.readFile(commitMsgFile, function(err, buffer) {

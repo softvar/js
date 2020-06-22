@@ -16,7 +16,7 @@ const toString = Object.prototype.toString;
  */
 export function isArray(val: any): val is any[] {
   return toString.call(val) === '[object Array]';
-};
+}
 
 /**
  * Check if the given value is of type: Boolean
@@ -26,7 +26,7 @@ export function isArray(val: any): val is any[] {
  */
 export function isBoolean(val: any): val is boolean {
   return toString.call(val) === '[object Boolean]';
-};
+}
 
 /**
  * Check if the given value is of type: Date
@@ -36,7 +36,7 @@ export function isBoolean(val: any): val is boolean {
  */
 export function isDate(val: any): val is Date {
   return toString.call(val) === '[object Date]';
-};
+}
 
 /**
  * Check if the given value is defined
@@ -46,7 +46,7 @@ export function isDate(val: any): val is Date {
  */
 export function isDefined<T>(val: T): val is NonNullable<T> {
   return !this.isUndefined(val) && !this.isNull(val);
-};
+}
 
 /**
  * Check if the given value is of type: Function
@@ -56,7 +56,7 @@ export function isDefined<T>(val: T): val is NonNullable<T> {
  */
 export function isFunction(val: any): val is () => void {
   return toString.call(val) === '[object Function]';
-};
+}
 
 /**
  * Check if the given value is of type: Object
@@ -64,10 +64,9 @@ export function isFunction(val: any): val is () => void {
  * @param {*} val any input value
  * @returns {boolean}
  */
-export function isObject<T>(val: T): val is object &
-  Exclude<T, any[] | (() => void) | RegExp | Promise<any> | Date> {
+export function isObject<T>(val: T): val is object & Exclude<T, any[] | (() => void) | RegExp | Promise<any> | Date> {
   return toString.call(val) === '[object Object]';
-};
+}
 
 /**
  * Check if the given value is of type: NaN i.e. not a number
@@ -77,7 +76,7 @@ export function isObject<T>(val: T): val is object &
  */
 export function isNaN(val: any): val is number {
   return val !== val;
-};
+}
 
 /**
  * Check if the given value is of type: Null
@@ -87,7 +86,7 @@ export function isNaN(val: any): val is number {
  */
 export function isNull(val: any): val is null {
   return toString.call(val) === '[object Null]';
-};
+}
 
 /**
  * Check if the given value is of type: Number
@@ -97,7 +96,7 @@ export function isNull(val: any): val is null {
  */
 export function isNumber(val: any): val is number {
   return toString.call(val) === '[object Number]';
-};
+}
 
 /**
  * Check if the given value is of type: Promise
@@ -107,7 +106,7 @@ export function isNumber(val: any): val is number {
  */
 export function isPromise(val: any): val is Promise<any> {
   return toString.call(val) === '[object Promise]';
-};
+}
 
 /**
  * Check if the given value is of type: Regex
@@ -117,7 +116,7 @@ export function isPromise(val: any): val is Promise<any> {
  */
 export function isRegex(val: any): val is RegExp {
   return toString.call(val) === '[object RegExp]';
-};
+}
 
 /**
  * Check if the given value is of type: String
@@ -127,7 +126,7 @@ export function isRegex(val: any): val is RegExp {
  */
 export function isString(val: any): val is string {
   return toString.call(val) === '[object String]';
-};
+}
 
 /**
  * Check if the given value is of type: Undefined
@@ -137,4 +136,4 @@ export function isString(val: any): val is string {
  */
 export function isUndefined(val: any): val is undefined {
   return toString.call(val) === '[object Undefined]';
-};
+}
