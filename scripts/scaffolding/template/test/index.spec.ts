@@ -1,5 +1,5 @@
-const {name} = require('../src/');
+import { changeMe } from '../src/';
 
-test('{name} - is defined', () => {
-  expect({name}).toBeDefined();
+test('{name} - changeMe fn is defined', () => {
+  expect(changeMe).toBeDefined();
 })

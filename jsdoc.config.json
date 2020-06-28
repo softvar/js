@@ -15,8 +15,7 @@
       "disableSort": false,
       "collapse": true,
       "resources": {
-          "Object": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
-          "Array": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+
       },
       "search": {
         "appId": "JRX357TS85",

@@ -2,6 +2,8 @@
 
 [![Maintained with Lerna](https://img.shields.io/badge/maintained%20with-lerna-blue?style=for-the-badge)](https://lerna.js.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge&logo=)](https://opensource.org/licenses/MIT)
+![TypeScript: Strict](https://img.shields.io/badge/typescript-strict-yellow?style=for-the-badge)
+[![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-e72163?style=for-the-badge)](https://prettier.io)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fe872ca1-6098-4e4b-88f3-a461f120356c/deploy-status)](https://app.netlify.com/sites/softvar-js/deploys)
 

@@ -4,6 +4,7 @@
   "description": "Every possible javascript utility you ever need",
   "main": "index.js",
   "scripts": {
+    "dev": "lerna run tsc && yarn jsdoc && yarn lint",
     "jsdoc": "jsdoc --configure jsdoc.config.json --verbose",
     "new": "node scripts/new.js",
     "test": "lerna run test",
@@ -52,7 +53,8 @@
   "lint-staged": {
     "**/*.ts": [
       "yarn lint",
-      "prettier"
+      "prettier",
+      "git add"
     ],
     "**/*.{json,md}": "prettier"
   },

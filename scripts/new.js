@@ -103,7 +103,7 @@ function addNewPackage(answers) {
 
   let list = [{
     file: `${folderPath}/package.json`,
-    replace:
+    replace
   }, {
     file: `${folderPath}/README.md`,
     replace
