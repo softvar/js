@@ -1,6 +1,6 @@
 {
   "name": "@softvar/util-event",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "event utility",
   "main": "lib/index.js",
   "license": "MIT",
