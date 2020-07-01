@@ -24,7 +24,7 @@ const util_datatype_1 = require("@softvar/util-datatype");
  */
 function fetchData(url, config) {
     if (!util_datatype_1.isString(url)) {
-        throw new Error('URL should be a string');
+        throw new Error('URL should be a string!');
     }
     return fetch(url)
         .then((response) => {

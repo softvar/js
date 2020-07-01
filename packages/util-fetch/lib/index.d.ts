@@ -18,7 +18,9 @@
  * });
  * @returns {Promise} - Promise
  */
-export declare function fetchData(url: string, config: {
-    successCallback: (_data: any) => {};
-    errorCallback: (_err: any) => {};
+export declare function fetchData(url: string, config?: {
+    successCallback?: callback;
+    errorCallback?: callback;
 }): Promise<any>;
+declare type callback = (_data: any) => void;
+export {};

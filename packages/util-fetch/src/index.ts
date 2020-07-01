@@ -22,9 +22,9 @@ import { isString } from "@softvar/util-datatype";
  * });
  * @returns {Promise} - Promise
  */
-export function fetchData(url: string, config: { successCallback: (_data) => {}, errorCallback: (_err) => {}}) {
+export function fetchData(url: string, config?: { successCallback?: callback, errorCallback?: callback }) {
   if (!isString(url)) {
-    throw new Error('URL should be a string');
+    throw new Error('URL should be a string!');
   }
 
   return fetch(url)
@@ -43,3 +43,7 @@ export function fetchData(url: string, config: { successCallback: (_data) => {},
       config.errorCallback(err);
     });
 }
+
+
+// callback type
+type callback = ( _data: any ) => void;

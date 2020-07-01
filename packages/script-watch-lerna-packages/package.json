@@ -1,0 +1,40 @@
+{
+  "name": "@softvar/script-watch-lerna-packages",
+  "version": "0.0.1",
+  "description": "watch-lerna-packages script",
+  "main": "lib/index.js",
+  "bin": {
+    "script-watch-lerna-package": "lib/index.js"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "author": "softvar <varun2902@gmail.com>",
+  "homepage": "https://github.com/softvar/js/tree/master/packages/script-watch-lerna-packages#readme",
+  "scripts": {
+    "tsc": "../../node_modules/typescript/bin/tsc --project tsconfig.json",
+    "test": "../../node_modules/jest/bin/jest.js --config=jest.config.js"
+  },
+  "dependencies": {
+    "chokidar": "^3.4.0",
+    "commander": "^5.1.0",
+    "execa": "^4.0.2"
+  },
+  "typings": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softvar/js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/softvar/js/issues"
+  }
+}

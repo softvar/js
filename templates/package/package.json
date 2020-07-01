@@ -1,0 +1,33 @@
+{
+  "name": "@{githubUsername}/{type}-{name}",
+  "version": "0.0.1",
+  "description": "{name} {type}",
+  "main": "lib/index.js",
+  "license": "{license}",
+  "keywords": [],
+  "author": "{githubUsername} <{githubUserEmail}>",
+  "homepage": "https://github.com/{githubUsername}/{githubReponame}/tree/master/packages/{type}-{name}#readme",
+  "scripts": {
+    "tsc": "../../node_modules/typescript/bin/tsc --project tsconfig.json",
+    "test": "../../node_modules/jest/bin/jest.js --config=jest.config.js"
+  },
+  "dependencies": {},
+  "typings": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/{githubUsername}/{githubReponame}.git"
+  },
+  "bugs": {
+    "url": "https://github.com/{githubUsername}/{githubReponame}/issues"
+  }
+}

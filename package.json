@@ -6,10 +6,13 @@
   "scripts": {
     "dev": "lerna run tsc && yarn jsdoc && yarn lint",
     "jsdoc": "jsdoc --configure jsdoc.config.json --verbose",
-    "new": "node scripts/new.js",
-    "test": "lerna run test",
+    "new": "node tools/scripts/new.js",
     "lint": "tslint -c tslint.json --fix 'packages/**/*.ts'",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "start": "yarn install; lerna run bootstrap; cd tools && yarn install && cd ..;",
+    "test": "lerna run test",
+    "tsc": "lerna run tsc",
+    "watch": "node tools/scripts/watch-packages.js --watch"
   },
   "repository": {
     "type": "git",
@@ -45,7 +48,7 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "node scripts/commit-msg",
+      "commit-msg": "node tools/scripts/commit-msg --path=../..",
       "pre-commit": "lint-staged",
       "pre-push": "lerna run tsc && yarn lint && yarn jsdoc && yarn test"
     }

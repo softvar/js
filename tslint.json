@@ -7,5 +7,12 @@
     "rules": {
         "jsdoc-format": true
     },
-    "rulesDirectory": []
+    "rulesDirectory": [],
+    "linterOptions": {
+        "exclude": [
+            "bin",
+            "packages/script-*/**/*",
+            "packages/githook-*/**/*"
+        ]
+    }
 }
