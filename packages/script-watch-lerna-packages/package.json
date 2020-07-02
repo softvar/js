@@ -4,7 +4,7 @@
   "description": "watch-lerna-packages script",
   "main": "lib/index.js",
   "bin": {
-    "script-watch-lerna-package": "lib/index.js"
+    "script-watch-lerna-packages": "lib/index.js"
   },
   "license": "MIT",
   "keywords": [],

@@ -44,7 +44,7 @@ const TYPES = {
   tracking: true
 };
 
-const root = path.resolve(path.join(__dirname, process.argv[2].split('--path=')[1]));
+const root = path.resolve(path.join(process.cwd(), process.argv[2].split('--path=')[1]));
 
 console.log(`Resolving .git folder from: ${root}`);
 
