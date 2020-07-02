@@ -1,6 +1,6 @@
 {
   "name": "@softvar/util-event",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "event utility",
   "main": "lib/index.js",
   "license": "MIT",
@@ -12,7 +12,7 @@
     "test": "../../node_modules/jest/bin/jest.js --config=jest.config.js"
   },
   "dependencies": {
-    "@softvar/util-datatype": "^1.0.3"
+    "@softvar/util-datatype": "^1.0.4"
   },
   "typings": "lib/index.d.ts",
   "directories": {

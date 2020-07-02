@@ -1,6 +1,6 @@
 {
   "name": "@softvar/util-datatype",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "datatype utility",
   "main": "lib/index.js",
   "license": "MIT",

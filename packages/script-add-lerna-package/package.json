@@ -1,6 +1,6 @@
 {
   "name": "@softvar/script-add-lerna-package",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "add-lerna-package script",
   "main": "lib/index.js",
   "bin": {
@@ -15,8 +15,8 @@
     "test": "../../node_modules/jest/bin/jest.js --config=jest.config.js"
   },
   "dependencies": {
-    "@softvar/util-console": "^0.1.6",
-    "@softvar/util-datatype": "^1.0.3",
+    "@softvar/util-console": "^0.1.7",
+    "@softvar/util-datatype": "^1.0.4",
     "chalk": "^4.1.0"
   },
   "typings": "lib/index.d.ts",

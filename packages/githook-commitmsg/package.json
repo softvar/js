@@ -1,6 +1,6 @@
 {
   "name": "@softvar/githook-commitmsg",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "commitmsg githook",
   "main": "lib/index.js",
   "bin": {
@@ -14,7 +14,6 @@
     "tsc": "../../node_modules/typescript/bin/tsc --project tsconfig.json",
     "test": "../../node_modules/jest/bin/jest.js --config=jest.config.js"
   },
-  "dependencies": {},
   "typings": "lib/index.d.ts",
   "directories": {
     "lib": "lib",
