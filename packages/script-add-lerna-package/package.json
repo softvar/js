@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@softvar/util-console": "^0.1.6",
+    "@softvar/util-datatype": "^1.0.3",
     "chalk": "^4.1.0"
   },
   "typings": "lib/index.d.ts",

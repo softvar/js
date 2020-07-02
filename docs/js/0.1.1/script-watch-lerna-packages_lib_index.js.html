@@ -136,14 +136,14 @@ exports.watch = exports.bootstrap = void 0;
 const LERNA_PACKAGE_WATCHER = 'LERNA_PACKAGE_WATCHER'; // tslint-disable-line
 const path = require("path");
 const fs = require("fs");
-const monorepo = require("commander");
+const commander = require("commander");
 const execa = require("execa");
 const chokidar = require("chokidar");
-monorepo
+commander
     .version("0.0.0")
     .option("-b, --bootstrap", "Bootstrap dependencies for the dependents of the current working directory.")
     .option("-w, --watch", "Start a watcher for the dependents of the current working directory.")
-    .parse(process.argv);
+    .parse();
 const manifest = (dir = undefined) => JSON.parse(fs.readFileSync(`${dir ? dir : process.cwd()}/package.json`, {
     encoding: "utf8"
 }));
@@ -257,9 +257,9 @@ const watch = () => __awaiter(void 0, void 0, void 0, function* () {
     }
 });
 exports.watch = watch;
-if (monorepo.bootstrap)
+if (commander.bootstrap)
     bootstrap();
-if (monorepo.watch)
+if (commander.watch)
     watch();
 //# sourceMappingURL=index.js.map</code></pre>
   </article>

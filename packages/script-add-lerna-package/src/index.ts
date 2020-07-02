@@ -17,7 +17,38 @@ const path = require('path');
 const chalk = require('chalk');
 const inquirer = require('inquirer');
 const execSync = require('child_process').execSync;
-const config = require('../../config');
+
+import { isObject, isString } from '@softvar/util-datatype';
+
+let config = {};
+
+try {
+  config = require(path.resolve(process.cwd(), 'config.js'));
+
+  if (!isObject(config)) {
+    console.error(`\nERROR - config.js does not export a valid object..\n`);
+    return;
+  }
+
+  if (config.github && isObject(config.github)) {
+    const { user, repo, email, license } = config.github;
+
+    if (!isString(user) || !isString(repo) || !isString(email) || !isString(license)) {
+      console.error('\nERROR - config.js has incorrect github object.\n');
+
+      return;
+    }
+  }
+
+  // check for valid object
+  JSON.parse(JSON.stringify(config));
+
+} catch (err) {
+  console.error(`\nERROR - config.js file is missing at the root of the project.\n`);
+
+  return;
+}
+
 
 const { prints } = require('@softvar/util-console');
 

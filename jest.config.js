@@ -16,11 +16,11 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: ['*.js', '!*.config.js', '!**/node_modules/**'],
   coverageDirectory: 'coverage',
-  coveragePathIgnorePatterns: ['/node_modules/'],
+  coveragePathIgnorePatterns: ['/node_modules/', '/template/'],
   coverageReporters: ['json', 'lcov', 'text', 'clover'],
   displayName: {
     name: 'JS',
     color: 'pink'
   },
-  testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/coverage/']
+  testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/coverage/', '/template/']
 };
