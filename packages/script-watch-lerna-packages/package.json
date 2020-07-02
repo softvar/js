@@ -1,6 +1,6 @@
 {
   "name": "@softvar/script-watch-lerna-packages",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "watch-lerna-packages script",
   "main": "lib/index.js",
   "bin": {
