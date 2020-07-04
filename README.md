@@ -6,6 +6,7 @@
 [![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-e72163?style=for-the-badge)](https://prettier.io)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fe872ca1-6098-4e4b-88f3-a461f120356c/deploy-status)](https://app.netlify.com/sites/softvar-js/deploys)
+[![CI](https://github.com/softvar/js/workflows/CI/badge.svg?branch=master)](https://github.com/softvar/js/actions?query=workflow%3ACI)
 
 
 Every possible javascript utility you ever need
