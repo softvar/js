@@ -1,6 +1,6 @@
 {
   "name": "@softvar/util-console",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "console utility",
   "main": "lib/index.js",
   "license": "MIT",
