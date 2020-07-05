@@ -1364,10 +1364,10 @@
   resolved "https://registry.yarnpkg.com/@softvar/githook-commitmsg/-/githook-commitmsg-1.0.1.tgz#e359ed15d1953fdda955c02c3ae981c7749ab3b8"
   integrity sha512-6VYYj75MI2azpDlw1OXC5E3bgG4BJ4TdZyke1hLah+ZGyH+gdY7dYl+WRmmCwhK7kyBwUY7P21C02F98ddJ5FA==
 
-"@softvar/script-add-lerna-package@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@softvar/script-add-lerna-package/-/script-add-lerna-package-1.0.6.tgz#8478e8d82d380bf58482e70f79b54da73edaf7cd"
-  integrity sha512-DcEz+qY1cCOZVXuwi6gad8sAZcPwZfgjVGyP2bSTtJQJB8Per/ciFRsK9ROJSIkmBBdeCOl3rrSqZ+yP5RC60g==
+"@softvar/script-add-lerna-package@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@softvar/script-add-lerna-package/-/script-add-lerna-package-1.0.7.tgz#bb9ea590336b3c30a7820aaa9d34c14932f72c9a"
+  integrity sha512-zlPWhWVtgY3aznLtyDgwVQ3bl+bG36zUF3ck9oHRPDef+pzZDzzGMKOrHOGmgT7OFxhQCuTt4LvKwWKpbq2GPQ==
   dependencies:
     "@softvar/util-console" "^0.1.8"
     "@softvar/util-datatype" "^1.0.4"
@@ -1381,6 +1381,11 @@
     chokidar "^3.4.0"
     commander "^5.1.0"
     execa "^4.0.2"
+
+"@softvar/template-jsdoc-theme@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@softvar/template-jsdoc-theme/-/template-jsdoc-theme-1.0.0.tgz#deab6426395c6330d8f70899cd0bf0b0acf4c69d"
+  integrity sha512-GeuDiNul42KnL2UizPwkpEoUEu5J9GEwLPa7us0O5N0hIMHiUomOcOXyGMdX4MLFS8+1fTY6tUYHIS5uhNJhCw==
 
 "@softvar/util-console@^0.1.8":
   version "0.1.8"

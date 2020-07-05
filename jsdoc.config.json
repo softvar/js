@@ -29,6 +29,6 @@
       "encoding": "utf8",
       "private": true,
       "recurse": true,
-      "template": "templates/jsdoc"
+      "template": "node_modules/@softvar/template-jsdoc-theme/template/"
   }
 }
