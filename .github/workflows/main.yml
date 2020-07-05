@@ -36,6 +36,8 @@ jobs:
     - name: yarn install, yarn dev, yarn test
       run: |
         yarn
+        yarn dev
+        yarn test
         yarn jsdoc
 
     - name: Upload docs for job:build
