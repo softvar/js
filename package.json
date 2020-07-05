@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@softvar/githook-commitmsg": "^1.0.1",
-    "@softvar/script-add-lerna-package": "^1.0.2",
+    "@softvar/script-add-lerna-package": "^1.0.3",
     "@softvar/script-watch-lerna-packages": "^1.0.2",
     "@types/jest": "^26.0.0",
     "@types/node": "^14.0.13",

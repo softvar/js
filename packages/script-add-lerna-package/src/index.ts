@@ -167,6 +167,8 @@ function addNewPackage(answers) {
     // and also to exclude certain files
     execSync(`cp -rp ${templateFolder}/* ${folderPath}`);
     execSync(`mv ${folderPath}/package-file.json ${folderPath}/package.json`);
+    execSync(`mv ${folderPath}/npmignore ${folderPath}/.npmignore`);
+    execSync(`mv ${folderPath}/_tsconfig.json ${folderPath}/tsconfig.json`);
   } catch (e) {
     prints(
       chalk.red(`Can't copy template. Ensure your current directory and the package with same name shouldn't exist!`),
@@ -197,7 +199,7 @@ function addNewPackage(answers) {
   }];
 
   let list = [{
-    file: `${folderPath}/package-file.json`,
+    file: `${folderPath}/package.json`,
     replace
   }, {
     file: `${folderPath}/README.md`,
