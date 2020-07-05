@@ -125,6 +125,7 @@ function addNewPackage(answers) {
         // Manually adding files so that only selected files goes into final package
         // and also to exclude certain files
         execSync(`cp -rp ${templateFolder}/* ${folderPath}`);
+        execSync(`mv ${folderPath}/package-file.json ${folderPath}/package.json`);
     }
     catch (e) {
         prints(chalk.red(`Can't copy template. Ensure your current directory and the package with same name shouldn't exist!`), 'log', printConfig);
@@ -150,7 +151,7 @@ function addNewPackage(answers) {
             with: config.github && config.github.email
         }];
     let list = [{
-            file: `${folderPath}/package.json`,
+            file: `${folderPath}/package-file.json`,
             replace
         }, {
             file: `${folderPath}/README.md`,
