@@ -59,7 +59,7 @@ const githubUsernamePlaceholder = '{githubUsername}';
 const githubReponamePlaceholder = '{githubReponame}';
 const githubUserEmailPlaceholder = '{githubUserEmail}'
 
-const templateFolder = (path.resolve(__dirname, './template'));
+const templateFolder = (path.resolve(__dirname, '../template'));
 
 const printConfig = {
   newLinesBefore: 1,
@@ -165,7 +165,7 @@ function addNewPackage(answers) {
   try {
     // Manually adding files so that only selected files goes into final package
     // and also to exclude certain files
-    execSync(`cp -r ${templateFolder}/* ${folderPath}`);
+    execSync(`cp -rp ${templateFolder}/* ${folderPath}`);
   } catch (e) {
     prints(
       chalk.red(`Can't copy template. Ensure your current directory and the package with same name shouldn't exist!`),

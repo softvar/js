@@ -7,6 +7,6 @@
     "./src"
   ],
   "exclude": [
-    "./src/template"
+    "./template"
   ]
  }
