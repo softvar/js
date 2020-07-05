@@ -44,7 +44,8 @@ const licensePlaceholder = '{license}';
 const githubUsernamePlaceholder = '{githubUsername}';
 const githubReponamePlaceholder = '{githubReponame}';
 const githubUserEmailPlaceholder = '{githubUserEmail}';
-const templateFolder = (path.resolve(__dirname, '../template'));
+const lernaPackageTemplateDir = path.resolve(path.join(process.cwd(), 'node_modules', '@softvar/template-lerna-package'));
+const templateFolder = path.join(lernaPackageTemplateDir, 'template');
 const printConfig = {
     newLinesBefore: 1,
     newLinesAfter: 1
