@@ -1,0 +1,34 @@
+{
+  "name": "@softvar/template-jsdoc-theme",
+  "version": "0.0.1",
+  "description": "jsdoc-theme template",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "keywords": [],
+  "author": "softvar <varun2902@gmail.com>",
+  "homepage": "https://github.com/softvar/js/tree/master/packages/template-jsdoc-theme#readme",
+  "scripts": {
+    "tsc": "../../node_modules/typescript/bin/tsc --project tsconfig.json",
+    "test": "../../node_modules/jest/bin/jest.js --config=jest.config.js"
+  },
+  "dependencies": {},
+  "typings": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "lib",
+    "template"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softvar/js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/softvar/js/issues"
+  }
+}
