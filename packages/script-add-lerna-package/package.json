@@ -1,6 +1,6 @@
 {
   "name": "@softvar/script-add-lerna-package",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "add-lerna-package script",
   "main": "lib/index.js",
   "bin": {
