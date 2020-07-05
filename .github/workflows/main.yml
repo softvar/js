@@ -10,6 +10,7 @@ on:
 
 jobs:
   build:
+    if: "!contains(toJSON(github.event.commits.*.message), '[skip-ci]')"
     name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
@@ -44,6 +45,7 @@ jobs:
         path: docs
 
   publish:
+    if: "!contains(toJSON(github.event.commits.*.message), '[skip-ci]')"
     name: 'Publish to Netlify'
     needs: build
     runs-on: ubuntu-latest
@@ -63,6 +65,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   docsearch:
+    if: "!contains(toJSON(github.event.commits.*.message), '[skip-ci]')"
     needs: publish
     name: Update docsearch indices
     runs-on: ubuntu-latest
