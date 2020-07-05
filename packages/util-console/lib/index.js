@@ -18,7 +18,8 @@ const newLine = '\n';
  * @param {number} [config.newLinesBefore=0] to have `n` newlines before the console[type] output
  * @param {number} [config.newLinesAfter=0] to have `n` newlines after the console[type] output
  */
-function prints(message = '', type = 'log', config = { newLinesBefore: 0, newLinesAfter: 0 }) {
+function prints(message = '', type = 'log', config = { newLinesBefore: 0, newLinesAfter: 0 } // tslint:disable-line:completed-docs
+) {
     const { newLinesBefore = 0, newLinesAfter = 0 } = config;
     if (!util_datatype_1.isString(type) || !util_datatype_1.isObject(config)) {
         throw new Error('Please pass the valid types for the arguments');

@@ -2,6 +2,7 @@ module.exports = {
   verbose: true,
   notify: true,
   testEnvironment: 'node',
+  cacheDirectory: '.jest-cache',
   // The root of your source code, typically /src
   // `<rootDir>` is a token Jest substitutes
   // roots: ["<rootDir>/src"],

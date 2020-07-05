@@ -21,9 +21,8 @@ const newLine = '\n';
 export function prints(
   message: any = '',
   type: string = 'log',
-  config: { newLinesBefore: number; newLinesAfter: number } = { newLinesBefore: 0, newLinesAfter: 0 }
+  config: { newLinesBefore: number; newLinesAfter: number } = { newLinesBefore: 0, newLinesAfter: 0 } // tslint:disable-line:completed-docs
 ) {
-
   const { newLinesBefore = 0, newLinesAfter = 0 } = config;
 
   if (!isString(type) || !isObject(config)) {

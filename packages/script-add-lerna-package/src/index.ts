@@ -75,7 +75,9 @@ const questions = [{
     'util',
     'service',
     'script',
-    'githook'
+    'githook',
+    'template',
+    'component'
   ]
 }, {
   type: 'string',
