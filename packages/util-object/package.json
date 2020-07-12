@@ -1,6 +1,6 @@
 {
   "name": "@softvar/util-object",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "object utility",
   "main": "lib/index.js",
   "license": "MIT",

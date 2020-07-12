@@ -1,6 +1,6 @@
 {
   "name": "@softvar/util-datatype",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "datatype utility",
   "main": "lib/index.js",
   "license": "MIT",
@@ -9,7 +9,7 @@
   "homepage": "https://github.com/softvar/js/tree/master/packages/util-datatype#readme",
   "scripts": {
     "watch:changes": "tsc && yarn test",
-        "tsc": "tsc",
+    "tsc": "tsc",
     "test": "../../node_modules/jest/bin/jest.js --config=jest.config.js"
   },
   "typings": "lib/index.d.ts",

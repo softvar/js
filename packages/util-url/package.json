@@ -1,6 +1,6 @@
 {
   "name": "@softvar/util-url",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "url utility",
   "main": "lib/index.js",
   "license": "MIT",
@@ -13,7 +13,7 @@
     "test": "../../node_modules/jest/bin/jest.js --config=jest.config.js"
   },
   "dependencies": {
-    "@softvar/util-datatype": "^1.0.4"
+    "@softvar/util-datatype": "^1.0.5"
   },
   "typings": "lib/index.d.ts",
   "directories": {
