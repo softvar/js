@@ -1,27 +1,26 @@
 {
-  "name": "@softvar/util-url",
-  "version": "0.0.3",
-  "description": "url utility",
+  "name": "@softvar/types-function",
+  "version": "0.0.1",
+  "description": "function types",
   "main": "lib/index.js",
   "license": "MIT",
   "keywords": [],
   "author": "softvar <varun2902@gmail.com>",
-  "homepage": "https://github.com/softvar/js/tree/master/packages/util-url#readme",
+  "homepage": "https://github.com/softvar/js/tree/master/packages/types-function#readme",
   "scripts": {
     "watch:changes": "tsc && yarn test",
-    "tsc": "tsc",
+    "tsc": "../../node_modules/typescript/bin/tsc --project tsconfig.json",
     "test": "../../node_modules/jest/bin/jest.js --config=jest.config.js"
   },
-  "dependencies": {
-    "@softvar/util-datatype": "^1.0.4"
-  },
+  "dependencies": {},
   "typings": "lib/index.d.ts",
   "directories": {
     "lib": "lib",
     "test": "test"
   },
   "files": [
-    "lib"
+    "lib",
+    "template"
   ],
   "publishConfig": {
     "access": "public"

@@ -103,7 +103,7 @@ const findParentPackages = async name => {
 };
 
 const buildDependency = async name => {
-  const lernaArgs = `run tsc --scope ${name}`.split(" ");
+  const lernaArgs = `run watch:changes --scope ${name}`.split(" ");
   await execa("lerna", lernaArgs, { stdio: "inherit" });
   await execa("yarn", ["jsdoc"], { stdio: 'inherit' })
 };

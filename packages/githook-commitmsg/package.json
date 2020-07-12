@@ -11,6 +11,7 @@
   "author": "softvar <varun2902@gmail.com>",
   "homepage": "https://github.com/softvar/js/tree/master/packages/githook-commitmsg#readme",
   "scripts": {
+    "watch:changes": "tsc && yarn test",
     "tsc": "../../node_modules/typescript/bin/tsc --project tsconfig.json",
     "test": "../../node_modules/jest/bin/jest.js --config=jest.config.js"
   },

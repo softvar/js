@@ -1364,10 +1364,10 @@
   resolved "https://registry.yarnpkg.com/@softvar/githook-commitmsg/-/githook-commitmsg-1.0.1.tgz#e359ed15d1953fdda955c02c3ae981c7749ab3b8"
   integrity sha512-6VYYj75MI2azpDlw1OXC5E3bgG4BJ4TdZyke1hLah+ZGyH+gdY7dYl+WRmmCwhK7kyBwUY7P21C02F98ddJ5FA==
 
-"@softvar/script-add-lerna-package@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@softvar/script-add-lerna-package/-/script-add-lerna-package-1.0.8.tgz#cd8ad04bc18c08da7655fb18dec8d86a6a3d1182"
-  integrity sha512-JluvYKQ2dLB8OhhPer4uw6Ejy59MALh6Bcg5Qsj3hTl5S1QAssg/hH3VsC/S3SUdLsg2fZjkd5ItiPiHKPmzcA==
+"@softvar/script-add-lerna-package@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@softvar/script-add-lerna-package/-/script-add-lerna-package-1.0.9.tgz#cfefc093e36ae4def7e43ff5657f9814e5476951"
+  integrity sha512-PiXtAxFHJnkvIwIOj770nfTvN8iUTXr5ZDl8Uki6tJmgn87afWP9dWnH7zUWmYYHGQSJPhumJhJ+f/7pSy8asw==
   dependencies:
     "@softvar/template-lerna-package" "^1.0.0"
     "@softvar/util-console" "^0.1.8"

@@ -84,7 +84,7 @@ const findParentPackages = (name) => __awaiter(void 0, void 0, void 0, function*
     return JSON.parse(stdout);
 });
 const buildDependency = (name) => __awaiter(void 0, void 0, void 0, function* () {
-    const lernaArgs = `run tsc --scope ${name}`.split(" ");
+    const lernaArgs = `run watch:changes --scope ${name}`.split(" ");
     yield execa("lerna", lernaArgs, { stdio: "inherit" });
     yield execa("yarn", ["jsdoc"], { stdio: 'inherit' });
 });

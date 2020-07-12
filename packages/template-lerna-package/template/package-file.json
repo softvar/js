@@ -8,6 +8,7 @@
   "author": "{githubUsername} <{githubUserEmail}>",
   "homepage": "https://github.com/{githubUsername}/{githubReponame}/tree/master/packages/{type}-{name}#readme",
   "scripts": {
+    "watch:changes": "tsc && yarn test",
     "tsc": "../../node_modules/typescript/bin/tsc --project tsconfig.json",
     "test": "../../node_modules/jest/bin/jest.js --config=jest.config.js"
   },
