@@ -1,6 +1,6 @@
 {
   "name": "@softvar/util-fetch",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "fetch utility",
   "main": "lib/index.js",
   "license": "MIT",

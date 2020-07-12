@@ -1,6 +1,6 @@
 {
   "name": "@softvar/util-dom",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "dom utility",
   "main": "lib/index.js",
   "license": "MIT",
