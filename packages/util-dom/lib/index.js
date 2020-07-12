@@ -3,7 +3,7 @@
  * @module util-dom
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.insertStyle = exports.injectScript = exports.insertLink = exports.isDynamicClass = exports.isDynamicId = void 0;
+exports.getNearestSelectorPath = exports.isSelectorElementPresent = exports.insertStyle = exports.injectScript = exports.insertLink = exports.isDynamicClass = exports.isDynamicId = void 0;
 /**
  * @file All dom related utilities
  */
@@ -141,4 +141,76 @@ exports.insertStyle = (content, position = 'head') => {
     (_a = document.getElementsByTagName(position)[0]) === null || _a === void 0 ? void 0 : _a.appendChild(style);
     return d.promise;
 };
+/**
+ * Checks if the element having the specified path exists
+ * @since 0.0.5
+ * @param {string} path selector of an element
+ * @example
+ * // returns true
+ * isSelectorElementPresent('body');
+ * // returns false
+ * isSelectorElementPresent('unknown-selector');
+ * @returns {boolean}
+ */
+function isSelectorElementPresent(path) {
+    try {
+        return document.querySelectorAll(path).length === 1;
+    }
+    catch (e) {
+        return false;
+    }
+}
+exports.isSelectorElementPresent = isSelectorElementPresent;
+/**
+ * Gives the nearest(shorter) selector path for the specified Node element
+ * @param {*} node - HTML Node
+ * @example
+ * // returns my-id
+ * getNearestSelectorPath(document.querySelector('#my-id'));
+ * // returns '.flex-column.mb-2.mb-md-0.mr-0.pr-md-4 > h5:nth-of-type(1)'
+ * getNearestSelectorPath($0); // some arbitary DOM element
+ * @returns {string} nearest/short selector path
+ */
+function getNearestSelectorPath(node) {
+    if (!node) {
+        return '';
+    }
+    const nodeName = node.nodeName.toLowerCase();
+    if (nodeName === 'body' || nodeName === 'head' || nodeName === 'html') {
+        return nodeName;
+    }
+    // do not use ids for elements that do not get rendered
+    const id = node.getAttribute('id');
+    if (id &&
+        !/base|link|meta|style|iframe|script|noscript/gi.test(node.nodeName) &&
+        !isDynamicId(id) &&
+        isSelectorElementPresent('#' + id)) {
+        return `#${id}`;
+    }
+    if (node.hasAttribute('class')) {
+        const classNames = node.getAttribute('class').split(/\s+/);
+        for (let i = 0; i < classNames.length; i++) {
+            if (isSelectorElementPresent('.' + classNames[i]) && !isDynamicClass(classNames[i])) {
+                return `.${classNames[i]}`;
+            }
+        }
+        for (let i = 0; i < classNames.length; i++) {
+            if (isSelectorElementPresent('.' + classNames[i]) && !isDynamicClass(classNames[i])) {
+                return `${nodeName}.${classNames[i]}`;
+            }
+        }
+        if (classNames.length && isSelectorElementPresent('.' + classNames.join('.')) && !isDynamicClass(classNames.join('.'))) {
+            return `.${classNames.join('.')}`;
+        }
+    }
+    const parentPath = getNearestSelectorPath(node.parentNode);
+    let index = 0;
+    for (let iterator = node; iterator; iterator = iterator.previousSibling) {
+        if (node.nodeName === iterator.nodeName) {
+            index++;
+        }
+    }
+    return parentPath + ' > ' + nodeName + ':nth-of-type(' + index + ')';
+}
+exports.getNearestSelectorPath = getNearestSelectorPath;
 //# sourceMappingURL=index.js.map

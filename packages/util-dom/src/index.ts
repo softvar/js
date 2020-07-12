@@ -153,3 +153,87 @@ export const insertStyle = (content: string, position: string = 'head') => {
 
   return d.promise;
 }
+
+/**
+ * Checks if the element having the specified path exists
+ * @since 0.0.5
+ * @param {string} path selector of an element
+ * @example
+ * // returns true
+ * isSelectorElementPresent('body');
+ * // returns false
+ * isSelectorElementPresent('unknown-selector');
+ * @returns {boolean}
+ */
+export function isSelectorElementPresent(path: string): boolean {
+  try {
+    return document.querySelectorAll(path).length === 1;
+  } catch (e) {
+    return false;
+  }
+}
+
+/**
+ * Gives the nearest(shorter) selector path for the specified Node element
+ * @param {*} node - HTML Node
+ * @example
+ * // returns my-id
+ * getNearestSelectorPath(document.querySelector('#my-id'));
+ * // returns '.flex-column.mb-2.mb-md-0.mr-0.pr-md-4 > h5:nth-of-type(1)'
+ * getNearestSelectorPath($0); // some arbitary DOM element
+ * @returns {string} nearest/short selector path
+ */
+export function getNearestSelectorPath(node: any): string {
+  if (!node) {
+    return '';
+  }
+
+  const nodeName = node.nodeName.toLowerCase();
+
+  if (nodeName === 'body' || nodeName === 'head' || nodeName === 'html') {
+    return nodeName;
+  }
+
+  // do not use ids for elements that do not get rendered
+  const id = node.getAttribute('id');
+
+  if (
+    id &&
+    !/base|link|meta|style|iframe|script|noscript/gi.test(node.nodeName) &&
+    !isDynamicId(id) &&
+    isSelectorElementPresent('#' + id)
+  ) {
+    return `#${id}`;
+  }
+
+  if (node.hasAttribute('class')) {
+    const classNames = node.getAttribute('class').split(/\s+/);
+
+    for (const className of classNames) {
+      if (isSelectorElementPresent('.' + className) && !isDynamicClass(className)) {
+        return `.${className}`;
+      }
+    }
+
+    for (const className of classNames) {
+      if (isSelectorElementPresent('.' + className) && !isDynamicClass(className)) {
+        return `${nodeName}.${className}`;
+      }
+    }
+
+    if (classNames.length && isSelectorElementPresent('.' + classNames.join('.')) && !isDynamicClass(classNames.join('.'))) {
+      return `.${classNames.join('.')}`;
+    }
+  }
+
+  const parentPath = getNearestSelectorPath(node.parentNode);
+
+  let index = 0;
+  for (let iterator = node; iterator; iterator = iterator.previousSibling) {
+    if (node.nodeName === iterator.nodeName) {
+      index++;
+    }
+  }
+
+  return `${parentPath} > ${nodeName}:nth-of-type(${index})`;
+}

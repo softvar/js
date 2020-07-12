@@ -71,3 +71,26 @@ export declare const injectScript: (src: string, targetElem: string, config?: {
  * @returns {Promise}
  */
 export declare const insertStyle: (content: string, position?: string) => any;
+/**
+ * Checks if the element having the specified path exists
+ * @since 0.0.5
+ * @param {string} path selector of an element
+ * @example
+ * // returns true
+ * isSelectorElementPresent('body');
+ * // returns false
+ * isSelectorElementPresent('unknown-selector');
+ * @returns {boolean}
+ */
+export declare function isSelectorElementPresent(path: string): boolean;
+/**
+ * Gives the nearest(shorter) selector path for the specified Node element
+ * @param {*} node - HTML Node
+ * @example
+ * // returns my-id
+ * getNearestSelectorPath(document.querySelector('#my-id'));
+ * // returns '.flex-column.mb-2.mb-md-0.mr-0.pr-md-4 > h5:nth-of-type(1)'
+ * getNearestSelectorPath($0); // some arbitary DOM element
+ * @returns {string} nearest/short selector path
+ */
+export declare function getNearestSelectorPath(node: any): string;
