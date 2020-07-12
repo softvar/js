@@ -55,10 +55,11 @@ const questions = [{
         name: 'type',
         message: 'Select type of package:',
         choices: [
-            'config',
             'util',
-            'service',
+            'types',
+            'config',
             'script',
+            'service',
             'githook',
             'template',
             'component'
