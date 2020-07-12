@@ -1,6 +1,7 @@
 /**
  * @module util-fetch
  */
+import { callback } from '@softvar/types-function';
 /**
  * @file All fetch related utilities
  */
@@ -22,5 +23,3 @@ export declare function fetchData(url: string, config?: {
     successCallback?: callback;
     errorCallback?: callback;
 }): Promise<any>;
-declare type callback = (_data: any) => void;
-export {};

@@ -29,5 +29,8 @@
   },
   "bugs": {
     "url": "https://github.com/softvar/js/issues"
+  },
+  "dependencies": {
+    "@softvar/util-promise": "^0.0.3"
   }
 }

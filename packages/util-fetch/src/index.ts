@@ -3,6 +3,7 @@
  */
 
 import { isString } from "@softvar/util-datatype";
+import { callback } from '@softvar/types-function';
 
 /**
  * @file All fetch related utilities
@@ -43,7 +44,3 @@ export function fetchData(url: string, config?: { successCallback?: callback, er
       config.errorCallback(err);
     });
 }
-
-
-// callback type
-type callback = ( _data: any ) => void;

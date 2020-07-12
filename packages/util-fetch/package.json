@@ -13,6 +13,7 @@
     "test": "../../node_modules/jest/bin/jest.js --config=jest.config.js"
   },
   "dependencies": {
+    "@softvar/types-function": "^1.0.0",
     "@softvar/util-datatype": "^1.0.5"
   },
   "typings": "lib/index.d.ts",
