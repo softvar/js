@@ -5,6 +5,7 @@ name: CI
 on:
   push:
     branches: [ master ]
+    tags-ignore: [ * ]
   pull_request:
     branches: [ master ]
 
@@ -36,6 +37,8 @@ jobs:
     - name: yarn install, yarn dev, yarn test
       run: |
         yarn
+        yarn global add lerna
+        ./node_modules/lerna/cli.js bootstrap
         yarn dev
         yarn test
         yarn jsdoc
