@@ -1,6 +1,6 @@
 {
   "name": "@softvar/util-string",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "string util",
   "main": "lib/index.js",
   "license": "MIT",
@@ -12,7 +12,6 @@
     "tsc": "../../node_modules/typescript/bin/tsc --project tsconfig.json",
     "test": "../../node_modules/jest/bin/jest.js --config=jest.config.js"
   },
-  "dependencies": {},
   "typings": "lib/index.d.ts",
   "directories": {
     "lib": "lib",

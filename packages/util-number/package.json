@@ -1,6 +1,6 @@
 {
   "name": "@softvar/util-number",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "number util",
   "main": "lib/index.js",
   "license": "MIT",
