@@ -10,6 +10,7 @@ exports.getRandomNumberBetween = exports.getRandomNumber = void 0;
  */
 /**
  * Generates a random number of n|n-1 digits
+ * @since 0.0.2
  * @param {number} n specify digits in the output
  * @example
  * // returns 24378
@@ -24,6 +25,7 @@ function getRandomNumber(n) {
 exports.getRandomNumber = getRandomNumber;
 /**
  * Generates a random number between min and max range
+ * @since 0.0.2
  * @param {number} min the lower range (including it)
  * @param {number} max the upper range (including it)
  * @example
