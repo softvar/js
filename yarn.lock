@@ -1364,14 +1364,14 @@
   resolved "https://registry.yarnpkg.com/@softvar/githook-commitmsg/-/githook-commitmsg-1.0.1.tgz#e359ed15d1953fdda955c02c3ae981c7749ab3b8"
   integrity sha512-6VYYj75MI2azpDlw1OXC5E3bgG4BJ4TdZyke1hLah+ZGyH+gdY7dYl+WRmmCwhK7kyBwUY7P21C02F98ddJ5FA==
 
-"@softvar/script-add-lerna-package@^1.0.9":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@softvar/script-add-lerna-package/-/script-add-lerna-package-1.0.9.tgz#cfefc093e36ae4def7e43ff5657f9814e5476951"
-  integrity sha512-PiXtAxFHJnkvIwIOj770nfTvN8iUTXr5ZDl8Uki6tJmgn87afWP9dWnH7zUWmYYHGQSJPhumJhJ+f/7pSy8asw==
+"@softvar/script-add-lerna-package@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@softvar/script-add-lerna-package/-/script-add-lerna-package-1.0.10.tgz#14cef6d6b7073138bd4b11225eac4ad9ed3ab1a8"
+  integrity sha512-8XvlrKXztiWttTf3/UqUbBT/5bEiSKwrHGbwRNpdc2N/mNM7bo8qdOR9O05OXomjhUDgZJjXCGvToRv4WX8GPA==
   dependencies:
-    "@softvar/template-lerna-package" "^1.0.0"
-    "@softvar/util-console" "^0.1.8"
-    "@softvar/util-datatype" "^1.0.4"
+    "@softvar/template-lerna-package" "^1.0.1"
+    "@softvar/util-console" "^0.1.9"
+    "@softvar/util-datatype" "^1.0.5"
     chalk "^4.1.0"
 
 "@softvar/script-watch-lerna-packages@^1.0.2":
@@ -1388,22 +1388,22 @@
   resolved "https://registry.yarnpkg.com/@softvar/template-jsdoc-theme/-/template-jsdoc-theme-1.0.0.tgz#deab6426395c6330d8f70899cd0bf0b0acf4c69d"
   integrity sha512-GeuDiNul42KnL2UizPwkpEoUEu5J9GEwLPa7us0O5N0hIMHiUomOcOXyGMdX4MLFS8+1fTY6tUYHIS5uhNJhCw==
 
-"@softvar/template-lerna-package@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@softvar/template-lerna-package/-/template-lerna-package-1.0.0.tgz#971fc095422fcfedccd81530c780fac7b23ed4f8"
-  integrity sha512-fA8/XwuKtgt84Ji4TOi9A2wyLGOS7tyHvPVto3VbbJDxijn4ofxZi5EM8Rj2MML6lWmpGNHvlu9RogjXVDHzdA==
+"@softvar/template-lerna-package@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@softvar/template-lerna-package/-/template-lerna-package-1.0.1.tgz#bf6c9641b61c810e5c000e35bb0dd0a5c270acf8"
+  integrity sha512-mJfMV1QSBDpOsEf1l34TRXGvnH5eUFtr9YJWe5Ebeo2XJe9qYJ6XHQC1zvDgYVa43UUV63mPxyDoz8KgAT+rWA==
 
-"@softvar/util-console@^0.1.8":
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/@softvar/util-console/-/util-console-0.1.8.tgz#fe0965ff92ec2dbf5d80692ad71d8e56c61a9a9d"
-  integrity sha512-jExXXe14dooMEkBD5Uevg4pEsz13lm7sv7lrFdEn2gq2XAvjH8EcJDD3aI7WU6yN5pdve4bifxTJDSoJCuSHTA==
+"@softvar/util-console@^0.1.9":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@softvar/util-console/-/util-console-0.1.9.tgz#7900ee3f95914808af24a0ab435a6e0ba0479955"
+  integrity sha512-pwdwdvhxa0n9h4uimnDKRmsnfU/CRvkkUfCEN9JRc35jbJ1uS6sdcjIXcH+/AfpWoVlF0PDGqV7oEsu1YMRqYQ==
   dependencies:
-    "@softvar/util-datatype" "^1.0.4"
+    "@softvar/util-datatype" "^1.0.5"
 
-"@softvar/util-datatype@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@softvar/util-datatype/-/util-datatype-1.0.4.tgz#800726660c011c5a98a240db4c90c8fcb16f20fa"
-  integrity sha512-RIz0rxSwW3Re9Hrpb5cTLY0zmrJK+xVTLJLMTUERQE3iY5x6aNfgNciQswrC4bCZ0zi6ZSN27Sh9avuORoOazw==
+"@softvar/util-datatype@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@softvar/util-datatype/-/util-datatype-1.0.5.tgz#df5b8aaae238e6fcd6a90a98ecf1d32086679663"
+  integrity sha512-f2kFgG5Oq8hrv6IslqrycbJtTnAAzdpnPOHGHaaj+L7ngfiq0xXlCqGHPT7fUkH3narXQNlcpfm3BZ6JrKTobA==
 
 "@types/babel__core@^7.1.7":
   version "7.1.8"
